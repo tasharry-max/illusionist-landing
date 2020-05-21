@@ -6,7 +6,8 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'standard'
+		'standard',
+		'prettier'
   ],
   globals: {
     Atomics: 'readonly',
@@ -20,7 +21,8 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: [
-    'react'
+		'react',
+		'prettier'
   ],
   rules: {
 		semi:  ["warn", "always"]
