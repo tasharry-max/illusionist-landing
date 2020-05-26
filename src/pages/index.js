@@ -9,6 +9,7 @@ import { ReactComponent as FacebookIcon } from '../images/Facebook-icon.svg';
 import { ReactComponent as TelegramIcon } from '../images/Telegram-icon.svg';
 import { ReactComponent as WhatsappIcon } from '../images/Whatsapp-icon.svg';
 import { ReactComponent as MailIcon } from '../images/Mail-icon.svg';
+import About from '../components/about';
 
 const Background = styled.div`
 	min-height: 100vh;
@@ -60,49 +61,6 @@ const HeaderIcons = styled.ul`
 	padding-left: 15px;
 `;
 
-const AboutMeContainer = styled.div`
-	display: flex;
-	flex-direction: row;
-`;
-
-const AboutMeSection = styled.section`
-	flex-basis: 50%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-`;
-
-const AboutMeTitle = styled.h2`
-	max-width: 200px;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 30px;
-	position: relative;
-	align-items: center;
-	justify-content: center;
-	text-align: right;
-		p {
-			font-size: 50px;
-		}
-`;
-const AboutMeDescription = styled.div`
-	max-width: 230px;
-	font-style: normal;
-	font-weight: 300;
-	font-size: 18px;
-	position: relative;
-	left: 40%;
-`;
-
-const AboutTopContainer = styled.div`
-	height: 425px;
-	width: 180px;
-`
-
-const AboutVerticalLine = styled.div`
-	height: 50%;
-	border-right: 1px solid white;
-`
 
 const GlobalStyle = createGlobalStyle`
 	html {
@@ -168,22 +126,9 @@ const IndexPage = () => (
 			  	<HeaderHashtag>#useyourfingers</HeaderHashtag>
 			  </HeaderDescription>
 		</HeaderContainer>
-
+		<About />
 	  </Background>
-		<AboutMeContainer>
-			<AboutMeSection>
-				<AboutTopContainer >
-					<AboutVerticalLine />
-					<AboutMeTitle>About 
-						<p>Me</p>
-					</AboutMeTitle>
-				</AboutTopContainer>
-	
-				<AboutMeDescription>
-				I was always passionate about magic. I`ve started handling playing cards since I was 8. Years of practicing has evolved my fingers to great sensitivity with cards and small objects. Desire to impress people leads me to practice and improve my skills everyday. Nowadays I'm a sleight of hand performer and this is my way to tell the world abou real magic.
-				</AboutMeDescription>
-				</AboutMeSection>
-				</AboutMeContainer>
+
 		<Next />
   </React.Fragment>
 );
