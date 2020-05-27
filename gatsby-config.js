@@ -28,7 +28,17 @@ module.exports = {
         display: 'minimal-ui',
         icon: 'src/images/gatsby-icon.png' // This path is relative to the root of the site.
       }
-    }
+		},
+		{
+			resolve: `gatsby-source-instagram`,
+			options: {
+				username: `evgenymoskalov`,
+				// access_token: "a valid access token",
+				// instagram_id: "your instagram_business_account id",
+				// paginate: 100,
+				maxPosts: 8,
+			},
+		},
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

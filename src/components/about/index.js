@@ -1,64 +1,74 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
+import Slider from "../slider";
 
 const Wrapper = styled.div`
-	display: flex;
-	flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  padding-bottom: 7%;
 `;
 
 const Section = styled.section`
-	flex-basis: 50%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Title = styled.h2`
-	max-width: 200px;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 30px;
-	position: relative;
-	align-items: center;
-	justify-content: center;
-	text-align: right;
-		p {
-			font-size: 50px;
-		}
+  max-width: 200px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: right;
+  p {
+    font-size: 110px;
+  }
 `;
 const Description = styled.div`
-	max-width: 230px;
-	font-style: normal;
-	font-weight: 300;
-	font-size: 18px;
-	position: relative;
-	left: 40%;
+  max-width: 230px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  position: relative;
+  left: 20%;
+  top: 3%;
 `;
 
 const TitleContainer = styled.div`
-	height: 425px;
-	width: 180px;
+  height: 425px;
+  width: 180px;
 `;
 
 const VerticalLine = styled.div`
-	height: 50%;
-	border-right: 1px solid white;
+  height: 50%;
+  border-right: 1px solid white;
 `;
 
 const About = () => (
-	<Wrapper>
-		<Section>
-			<TitleContainer>
-				<VerticalLine />
-				<Title>About 
-					<p>Me</p>
-				</Title>
-			</TitleContainer>
-			<Description>
-				I was always passionate about magic. I`ve started handling playing cards since I was 8. Years of practicing has evolved my fingers to great sensitivity with cards and small objects. Desire to impress people leads me to practice and improve my skills everyday. Nowadays I'm a sleight of hand performer and this is my way to tell the world abou real magic.
-			</Description>
-		</Section>
-	</Wrapper>
+  <Wrapper>
+    <Section>
+      <TitleContainer>
+        <VerticalLine />
+        <Title>
+          About
+          <p>Me</p>
+        </Title>
+      </TitleContainer>
+      <Description>
+        I was always passionate about magic. I`ve started handling playing cards
+        since I was 8. Years of practicing has evolved my fingers to great
+        sensitivity with cards and small objects. Desire to impress people leads
+        me to practice and improve my skills everyday. Nowadays I`m a sleight of
+        hand performer and this is my way to tell the world abou real magic.
+      </Description>
+    </Section>
+    <Slider />
+  </Wrapper>
 );
 
 export default About;
