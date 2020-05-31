@@ -21,6 +21,7 @@ const Background = styled.div`
   background-image: url(${headerImage});
   background-size: cover;
 	background-position: 50%;
+	background-attachment: fixed;
 `;
 
 const HeaderContainer = styled.div`
