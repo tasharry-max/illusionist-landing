@@ -12,6 +12,7 @@ import { ReactComponent as MailIcon } from "../images/Mail-icon.svg";
 import About from "../components/about";
 import Airbnb from "../components/airbnb";
 import Instagram from "../components/instagram";
+import PartySlider from "../components/party-slider";
 import { graphql } from "gatsby";
 
 const Background = styled.div`
@@ -173,7 +174,7 @@ const IndexPage = ({ data: { allInstaNode } }) => {
       <Instagram posts={allInstaNode} />
       <AirbnbTitle>My AirBnb</AirbnbTitle>
       <Airbnb />
-
+      <PartySlider />
       <Next />
     </React.Fragment>
   );
