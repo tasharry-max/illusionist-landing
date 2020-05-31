@@ -80,6 +80,14 @@ const VideoWrapper = styled.div`
   }
 `;
 
+const AirbnbTitle = styled.h3`
+  font-weight: 600;
+  font-size: 64px;
+  color: black;
+  -webkit-text-stroke: 0.5px white;
+  padding-left: 50px;
+`;
+
 const GlobalStyle = createGlobalStyle`
 	html {
 		box-sizing: border-box;
@@ -163,6 +171,7 @@ const IndexPage = ({ data: { allInstaNode } }) => {
         ></iframe>
       </VideoWrapper>
       <Instagram posts={allInstaNode} />
+      <AirbnbTitle>My AirBnb</AirbnbTitle>
       <Airbnb />
 
       <Next />
@@ -175,18 +184,11 @@ export default IndexPage;
 export const pageQuery = graphql`
   query IndexQuery {
     allInstaNode(filter: { username: { eq: "evgenymoskalov" } }, limit: 8) {
-      edges {
-        node {
-          id
-          username
-          likes
-          caption
-          comments
-          localFile {
-            childImageSharp {
-              fluid(quality: 70, maxWidth: 600, maxHeight: 600) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
+      nodes {
+        localFile {
+          childImageSharp {
+            fluid(quality: 100, maxWidth: 600, maxHeight: 600) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
