@@ -16,13 +16,13 @@ const images = [
 ];
 
 const Container = styled.div`
-  height: 600px;
+  height: 100vh;
   width: 100%;
 `;
 
 const Images = styled.div`
   position: relative;
-  height: 520px;
+  height: calc(100vh - 60px);
 `;
 
 const Image = styled(animated.div)`

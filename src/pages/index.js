@@ -20,6 +20,7 @@ const Background = styled.div`
   height: 1px;
   background-image: url(${headerImage});
   background-size: cover;
+	background-position: 50%;
 `;
 
 const HeaderContainer = styled.div`
@@ -71,13 +72,13 @@ const VideoWrapper = styled.div`
   padding-bottom: 56.25%; /* 16:9 */
   padding-top: 25px;
   height: 0;
+
   iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    padding-bottom: 7%;
   }
 `;
 
@@ -116,10 +117,6 @@ const GlobalStyle = createGlobalStyle`
 		font-family: 'Montserrat', sans-serif;
 		color: white;
 	}
-`;
-
-const Next = styled.div`
-  height: 10000px;
 `;
 
 const IndexPage = ({ data: { allInstaNode } }) => {
@@ -175,7 +172,6 @@ const IndexPage = ({ data: { allInstaNode } }) => {
       <AirbnbTitle>My AirBnb</AirbnbTitle>
       <Airbnb />
       <PartySlider />
-      <Next />
     </React.Fragment>
   );
 };
@@ -186,6 +182,7 @@ export const pageQuery = graphql`
   query IndexQuery {
     allInstaNode(filter: { username: { eq: "evgenymoskalov" } }, limit: 8) {
       nodes {
+				id
         localFile {
           childImageSharp {
             fluid(quality: 100, maxWidth: 600, maxHeight: 600) {

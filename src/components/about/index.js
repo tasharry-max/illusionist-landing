@@ -5,8 +5,7 @@ import Slider from "../slider";
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
-  height: 100%;
-  padding-bottom: 7%;
+  height: 100vh;
 `;
 
 const Section = styled.section`

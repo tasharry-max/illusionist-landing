@@ -17,6 +17,7 @@ const Image = styled(animated.div)`
   height: 100%;
   background-image: url(${props => props.image});
   background-size: cover;
+	background-position: center;
 `;
 
 const ControlContainer = styled.form`
