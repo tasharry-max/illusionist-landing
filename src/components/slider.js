@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { animated, useTransition } from "react-spring";
-import sliderPhoto1 from "../images/slider-1.jpg";
-import sliderPhoto2 from "../images/slider-2.jpg";
+import sliderPhoto1 from "../images/slider-1-min.jpg";
+import sliderPhoto2 from "../images/slider-2-min.jpg";
 
 const SliderContainer = styled.div`
   flex-basis: 50%;

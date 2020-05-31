@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { animated, useTransition } from "react-spring";
-import partySlider1 from "../images/party-slider-1.jpg";
-import partySlider2 from "../images/party-slider-2.jpg";
-import partySlider3 from "../images/party-slider-3.jpg";
-import partySlider4 from "../images/party-slider-4.jpg";
-import partySlider5 from "../images/party-slider-5.jpg";
+import partySlider1 from "../images/party-slider-1-min.jpg";
+import partySlider2 from "../images/party-slider-2-min.jpg";
+import partySlider3 from "../images/party-slider-3-min.jpg";
+import partySlider4 from "../images/party-slider-4-min.jpg";
+import partySlider5 from "../images/party-slider-5-min.jpg";
 
 const images = [
   { href: partySlider1, title: "corporate party" },
@@ -42,17 +42,21 @@ const Buttons = styled.div`
   justify-content: space-around;
   padding: 20px 0;
   button {
-		background: black;
-		color: white;
+    background: black;
+    color: white;
     border: none;
-		outline: none;
+    outline: none;
     white-space: nowrap;
     text-transform: uppercase;
     font-size: 14px;
+    cursor: pointer;
   }
-	.active {
-		color: grey;
-	}
+  button:hover:not(.active) {
+    opacity: 0.75;
+  }
+  .active {
+    opacity: 0.5;
+  }
 `;
 const ControlCheckbox = styled.div`
   input {
@@ -92,7 +96,7 @@ const PartySlider = () => {
       </Images>
       <Buttons>
         {images.map((image, index) => {
-					const isActive = index === currIndex ? "active" : "";
+          const isActive = index === currIndex ? "active" : "";
           return (
             <ControlCheckbox key={image.title}>
               <button onClick={() => setIndex(index)} className={isActive}>
