@@ -31,6 +31,11 @@ const HeaderContainer = styled.div`
   height: 100%;
   align-items: flex-end;
   justify-content: center;
+	@media (max-width: 600px) {
+		max-width: 100%;
+		justify-content: flex-end;
+		margin-right: 20px;
+	}
 `;
 
 const HeaderTitle = styled.h1`
@@ -39,6 +44,10 @@ const HeaderTitle = styled.h1`
   left: 10px;
   font-weight: bold;
   font-size: 56px;
+		@media (max-width: 600px) {
+			top: 0;
+			font-size: 35px;
+		}
 `;
 const HeaderDescription = styled.div`
   justify-content: center;
@@ -71,7 +80,6 @@ const HeaderIcons = styled.ul`
 const VideoWrapper = styled.div`
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
-  padding-top: 25px;
   height: 0;
 
   iframe {
@@ -127,25 +135,25 @@ const IndexPage = ({ data: { allInstaNode } }) => {
       <Normalize />
       <Background>
         <HeaderIcons>
-          <a href="">
+          <a href="https://vm.tiktok.com/TVFURV/" target="_blank">
             <TikTokIcon />
           </a>
-          <a href="">
+          <a href="https://www.instagram.com/evgenymoskalov" target="_blank">
             <InstagramIcon />
           </a>
-          <a href="">
+          <a href="https://www.youtube.com/channel/UC3Yt5PLr3KnNtbSivR6U_IA?view_as=subscriber" target="_blank">
             <YoutubeIcon />
           </a>
-          <a href="">
+          <a href="https://www.facebook.com/evgeny.moskalov" target="_blank">
             <FacebookIcon />
           </a>
-          <a href="">
+          <a href="https://t.me/useyourfingers" target="_blank">
             <TelegramIcon />
           </a>
-          <a href="">
+          <a href="https://wa.me/0988986808" target="_blank">
             <WhatsappIcon />
           </a>
-          <a href="">
+          <a href="mailto:evgenymoskalov@gmail.com" target="_blank">
             <MailIcon />
           </a>
         </HeaderIcons>

@@ -5,12 +5,19 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+	padding-bottom: 40px;
+	@media (max-width: 600px) {
+		flex-direction: column;
+	}
 `;
 
 const Card = styled.div`
   width: 410px;
   min-height: 300px;
   margin: auto;
+	@media (max-width: 600px) {
+		max-width: 380px;
+	}
 `;
 
 const AirBnb = () => (

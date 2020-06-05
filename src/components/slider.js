@@ -7,6 +7,9 @@ import sliderPhoto2 from "../images/slider-2-min.jpg";
 const SliderContainer = styled.div`
   flex-basis: 50%;
   position: relative;
+	@media (max-width: 600px) {
+		display: none;
+	}
 `;
 
 const Image = styled(animated.div)`
