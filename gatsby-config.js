@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = {
   siteMetadata: {
     title: "Gatsby Default Starter",
@@ -34,7 +36,7 @@ module.exports = {
       resolve: `gatsby-source-instagram`,
       options: {
         username: `evgenymoskalov`,
-        // access_token: "a valid access token",
+        access_token: process.env.INSTA_TOKEN,
         // instagram_id: "your instagram_business_account id",
         // paginate: 100,
         maxPosts: 8,
