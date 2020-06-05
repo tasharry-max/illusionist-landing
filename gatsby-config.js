@@ -37,7 +37,7 @@ module.exports = {
       options: {
         username: `evgenymoskalov`,
         access_token: process.env.INSTA_TOKEN,
-        // instagram_id: "your instagram_business_account id",
+        instagram_id: process.env.INSTA_ID,
         // paginate: 100,
         maxPosts: 8,
       },
