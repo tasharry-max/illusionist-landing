@@ -13,6 +13,7 @@ import About from "../components/about";
 import Airbnb from "../components/airbnb";
 import Instagram from "../components/instagram";
 import PartySlider from "../components/party-slider";
+import Seo from "../components/seo.js";
 import { graphql } from "gatsby";
 
 const Background = styled.div`
@@ -20,8 +21,8 @@ const Background = styled.div`
   height: 1px;
   background-image: url(${headerImage});
   background-size: cover;
-	background-position: 50%;
-	background-attachment: fixed;
+  background-position: 50%;
+  background-attachment: fixed;
 `;
 
 const HeaderContainer = styled.div`
@@ -123,6 +124,27 @@ const GlobalStyle = createGlobalStyle`
 const IndexPage = ({ data: { allInstaNode } }) => {
   return (
     <React.Fragment>
+      <Seo
+        title="Evgeny Moskalov | Sleight of hand magician"
+        description=" I'm sleight of hand magician, playing cards geek, street magic performer, juggler, entertainer, card magic teacher."
+        keywords={[
+          "sleight of hand",
+          "cardistry",
+          "magic",
+          "magician",
+          "card magician",
+          "card magic",
+          "street magic",
+          "card tricks",
+          "playing cards",
+          "playing cards magic",
+          "playing cards trick",
+          "ukrainemagic",
+          "kyivmagic",
+          "cardtricks online",
+          "cardmagic online",
+        ]}
+      />
       <GlobalStyle />
       <Normalize />
       <Background>
@@ -183,7 +205,7 @@ export const pageQuery = graphql`
   query IndexQuery {
     allInstaNode(filter: { username: { eq: "evgenymoskalov" } }, limit: 8) {
       nodes {
-				id
+        id
         localFile {
           childImageSharp {
             fluid(quality: 100, maxWidth: 600, maxHeight: 600) {
