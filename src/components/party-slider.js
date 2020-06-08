@@ -33,6 +33,9 @@ const Image = styled(animated.div)`
   left: 0;
   width: 100%;
   height: 100%;
+	@media (max-width: 600px) {
+		background-position: center;
+	}
 `;
 
 const Buttons = styled.div`
@@ -50,6 +53,9 @@ const Buttons = styled.div`
     text-transform: uppercase;
     font-size: 14px;
     cursor: pointer;
+		@media (max-width: 600px) {
+			background: none;
+		}
   }
   button:hover:not(.active) {
     opacity: 0.75;
@@ -57,6 +63,14 @@ const Buttons = styled.div`
   .active {
     opacity: 0.5;
   }
+	@media (max-width: 600px) {
+		flex-direction: column;
+		text-align: center;
+		height: 200px;
+		position: relative;
+		bottom: 200px;
+		background: rgba(0, 0, 0, 0.3);
+	}
 `;
 const ControlCheckbox = styled.div`
   input {
