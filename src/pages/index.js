@@ -32,11 +32,11 @@ const HeaderContainer = styled.div`
   height: 100%;
   align-items: flex-end;
   justify-content: center;
-	@media (max-width: 600px) {
-		max-width: 100%;
-		justify-content: flex-end;
-		margin-right: 20px;
-	}
+  @media (max-width: 600px) {
+    max-width: 100%;
+    justify-content: flex-end;
+    margin-right: 20px;
+  }
 `;
 
 const HeaderTitle = styled.h1`
@@ -45,10 +45,10 @@ const HeaderTitle = styled.h1`
   left: 10px;
   font-weight: bold;
   font-size: 56px;
-		@media (max-width: 600px) {
-			top: 0;
-			font-size: 35px;
-		}
+  @media (max-width: 600px) {
+    top: 0;
+    font-size: 35px;
+  }
 `;
 const HeaderDescription = styled.div`
   justify-content: center;
@@ -131,28 +131,27 @@ const GlobalStyle = createGlobalStyle`
 
 const IndexPage = ({ data: { allInstaNode } }) => {
   return (
-    <React.Fragment>
-      <Seo
-        title="Evgeny Moskalov | Sleight of hand magician"
-        description=" I'm sleight of hand magician, playing cards geek, street magic performer, juggler, entertainer, card magic teacher."
-        keywords={[
-          "sleight of hand",
-          "cardistry",
-          "magic",
-          "magician",
-          "card magician",
-          "card magic",
-          "street magic",
-          "card tricks",
-          "playing cards",
-          "playing cards magic",
-          "playing cards trick",
-          "ukrainemagic",
-          "kyivmagic",
-          "cardtricks online",
-          "cardmagic online",
-        ]}
-      />
+    <Seo
+      title="Evgeny Moskalov | Sleight of hand magician"
+      description=" I'm sleight of hand magician, playing cards geek, street magic performer, juggler, entertainer, card magic teacher."
+      keywords={[
+        "sleight of hand",
+        "cardistry",
+        "magic",
+        "magician",
+        "card magician",
+        "card magic",
+        "street magic",
+        "card tricks",
+        "playing cards",
+        "playing cards magic",
+        "playing cards trick",
+        "ukrainemagic",
+        "kyivmagic",
+        "cardtricks online",
+        "cardmagic online",
+      ]}
+    >
       <GlobalStyle />
       <Normalize />
       <Background>
@@ -163,7 +162,10 @@ const IndexPage = ({ data: { allInstaNode } }) => {
           <a href="https://www.instagram.com/evgenymoskalov" target="_blank">
             <InstagramIcon />
           </a>
-          <a href="https://www.youtube.com/channel/UC3Yt5PLr3KnNtbSivR6U_IA?view_as=subscriber" target="_blank">
+          <a
+            href="https://www.youtube.com/channel/UC3Yt5PLr3KnNtbSivR6U_IA?view_as=subscriber"
+            target="_blank"
+          >
             <YoutubeIcon />
           </a>
           <a href="https://www.facebook.com/evgeny.moskalov" target="_blank">
@@ -203,7 +205,7 @@ const IndexPage = ({ data: { allInstaNode } }) => {
       <AirbnbTitle>My AirBnb</AirbnbTitle>
       <Airbnb />
       <PartySlider />
-    </React.Fragment>
+    </Seo>
   );
 };
 
