@@ -68,7 +68,7 @@ const Buttons = styled.div`
 		text-align: center;
 		height: 200px;
 		position: relative;
-		bottom: 200px;
+		bottom: 220px;
 		background: rgba(0, 0, 0, 0.3);
 	}
 `;
