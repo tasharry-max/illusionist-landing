@@ -22,8 +22,13 @@ const Background = styled.div`
   height: 1px;
   background-image: url(${headerImage});
   background-size: cover;
-  background-position: 50%;
+  background-position: center top;
   background-attachment: fixed;
+
+  @media (max-width: 812px) {
+		background-attachment: scroll;
+    background-position: center center 40px;
+  }
 `;
 
 const HeaderContainer = styled.div`
@@ -33,7 +38,7 @@ const HeaderContainer = styled.div`
   height: 100%;
   align-items: flex-end;
   justify-content: center;
-  @media (max-width: 600px) {
+  @media (max-width: 812px) {
     max-width: 100%;
     justify-content: flex-end;
     margin-right: 20px;
@@ -46,7 +51,7 @@ const HeaderTitle = styled.h1`
   left: 10px;
   font-weight: bold;
   font-size: 56px;
-  @media (max-width: 600px) {
+  @media (max-width: 812px) {
     top: 0;
     font-size: 35px;
   }
@@ -104,7 +109,7 @@ const AirbnbTitle = styled.h3`
 
 const GlobalStyle = createGlobalStyle`
 	html {
-		box-sizing: border-box;
+		box-sizing: padding-box;
 	}
 
 	*,
@@ -129,6 +134,11 @@ const GlobalStyle = createGlobalStyle`
 		font-family: 'Montserrat', sans-serif;
 		color: white;
 	}
+`;
+
+const ContentWithoutNavbar = styled.div`
+  margin-left: 60px;
+  width: calc(100% - 60px);
 `;
 
 const IndexPage = ({ data: { allInstaNode } }) => {
@@ -157,6 +167,7 @@ const IndexPage = ({ data: { allInstaNode } }) => {
       <GlobalStyle />
       <Normalize />
       <Background>
+        <HeaderTitle>Evgeny Moskalov</HeaderTitle>
         <HeaderIcons>
           <a href="https://vm.tiktok.com/TVFURV/" target="_blank">
             <TikTokIcon />
@@ -183,7 +194,6 @@ const IndexPage = ({ data: { allInstaNode } }) => {
             <MailIcon />
           </a>
         </HeaderIcons>
-        <HeaderTitle>Evgeny Moskalov</HeaderTitle>
         <HeaderContainer>
           <HeaderDescription>
             Sleight of hand magician / Playing cards geek
@@ -192,20 +202,22 @@ const IndexPage = ({ data: { allInstaNode } }) => {
         </HeaderContainer>
       </Background>
       <About />
-      <VideoWrapper>
-        <iframe
-          width="1220"
-          height="693"
-          display="flex"
-          src="https://www.youtube.com/embed/c4TuWAzL5Mw"
-          frameBorder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      </VideoWrapper>
-      <Instagram posts={allInstaNode} />
-      <AirbnbTitle>My AirBnb experiences</AirbnbTitle>
-      <Airbnb />
+      <ContentWithoutNavbar>
+        <VideoWrapper>
+          <iframe
+            width="1220"
+            height="693"
+            display="flex"
+            src="https://www.youtube.com/embed/c4TuWAzL5Mw"
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </VideoWrapper>
+        <Instagram posts={allInstaNode} />
+        <AirbnbTitle>My AirBnb experiences</AirbnbTitle>
+        <Airbnb />
+      </ContentWithoutNavbar>
       <PartySlider />
       <Footer />
     </Seo>
