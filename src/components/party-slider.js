@@ -33,7 +33,7 @@ const Image = styled(animated.div)`
   left: 0;
   width: 100%;
   height: 100%;
-	@media (max-width: 600px) {
+	@media (max-width: 812px) {
 		background-position: center;
 	}
 `;
@@ -53,7 +53,7 @@ const Buttons = styled.div`
     text-transform: uppercase;
     font-size: 14px;
     cursor: pointer;
-		@media (max-width: 600px) {
+		@media (max-width: 812px) {
 			background: none;
 		}
   }
@@ -63,7 +63,7 @@ const Buttons = styled.div`
   .active {
     opacity: 0.5;
   }
-	@media (max-width: 600px) {
+	@media (max-width: 812px) {
 		flex-direction: column;
 		text-align: center;
 		height: 200px;

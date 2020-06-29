@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   a {
     flex-basis: 25%;
     height: auto;
-		@media (max-width: 600px) {
+		@media (max-width: 812px) {
 			flex-basis: 50%;
 		}
   }
