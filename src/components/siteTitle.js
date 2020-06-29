@@ -17,12 +17,11 @@ const appear = keyframes`
 `;
 
 const HeaderTitle = styled(animated.h1)`
-  top: 100px;
   left: 10px;
   font-weight: bold;
   font-size: 54px;
   position: absolute;
-  top: 150px;
+  top: 60px;
   left: 11px;
   margin: 0;
   opacity: 0;
@@ -35,7 +34,7 @@ const HeaderTitle = styled(animated.h1)`
   display: flex;
   flex-direction: row;
 
-  animation: ${appear} 0.5s ease-out 1s forwards;
+  animation: ${appear} 0.5s ease-out 0.5s forwards;
 `;
 
 const SiteTitle = () => {

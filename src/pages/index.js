@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle, keyframes } from "styled-components";
 import { Normalize } from "styled-normalize";
 import headerImage from "../images/header-min.jpg";
 import { ReactComponent as TikTokIcon } from "../icons/Tiktok-icon.svg";
@@ -49,7 +49,20 @@ const HeaderContainer = styled.div`
   }
 `;
 
+const descriotionAppear = keyframes`
+  from {
+    transform: translateY(500px);
+		opacity: 1;
+  }
+
+  to {
+    transform: translateY(0);
+		opacity: 1;
+  }
+`;
+
 const HeaderDescription = styled.div`
+  opacity: 0;
   justify-content: center;
   height: 190px;
   width: 170px;
@@ -59,6 +72,7 @@ const HeaderDescription = styled.div`
   font-weight: normal;
   text-align: right;
   border-right: 1px solid #ffffff;
+  animation: ${descriotionAppear} 0.5s ease-out 1.5s forwards;
 `;
 
 const HeaderHashtag = styled.div`
@@ -68,12 +82,26 @@ const HeaderHashtag = styled.div`
   opacity: 0.5;
 `;
 
+const sidebarAppear = keyframes`
+  from {
+    transform: translateY(-500px);
+		opacity: 1;
+  }
+
+  to {
+    transform: translateY(0);
+		opacity: 1;
+  }
+`;
+
 const HeaderIcons = styled.ul`
   width: 30px;
   padding-left: 15px;
   z-index: 3;
   position: fixed;
-  top: 200px;
+  top: 115px;
+  opacity: 0;
+  animation: ${sidebarAppear} 0.5s ease-out 1s forwards;
 
   @media (max-width: 812px) {
     top: 50px;
