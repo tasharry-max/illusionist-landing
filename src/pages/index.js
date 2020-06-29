@@ -26,7 +26,7 @@ const Background = styled.div`
   background-attachment: fixed;
 
   @media (max-width: 812px) {
-		background-attachment: scroll;
+    background-attachment: scroll;
     background-position: center center 40px;
   }
 `;
@@ -46,12 +46,18 @@ const HeaderContainer = styled.div`
 `;
 
 const HeaderTitle = styled.h1`
-  position: absolute;
   top: 100px;
   left: 10px;
   font-weight: bold;
-  font-size: 56px;
+  font-size: 54px;
+	line-height: 42px;
+  padding-top: 200px;
+  padding-left: 11px;
+  margin: 0;
+
   @media (max-width: 812px) {
+    padding-left: 15px;
+    padding-top: 15px;
     top: 0;
     font-size: 35px;
   }
@@ -76,12 +82,16 @@ const HeaderHashtag = styled.div`
 `;
 
 const HeaderIcons = styled.ul`
-  height: 100px;
   width: 30px;
-  position: fixed;
-  top: 210px;
   padding-left: 15px;
   z-index: 3;
+	position: sticky;
+	top: 200px;
+
+  a {
+    margin-bottom: 15px;
+    display: inline-block;
+  }
 `;
 
 const VideoWrapper = styled.div`
