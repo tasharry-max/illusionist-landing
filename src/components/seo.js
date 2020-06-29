@@ -1,19 +1,23 @@
 import React from "react";
-import Helmet from "helmet";
+import { Helmet } from "react-helmet";
 
-const Seo = ({ description, title, keywords, children }) => {
+const Seo = props => {
+  const { description, title, keywords, children } = props;
+
   return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(", ")} />
-      {/* <link rel="canonical" href="ev" /> */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
+    <React.Fragment>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords.join(", ")} />
+        {/* <link rel="canonical" href="ev" /> */}
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+      </Helmet>
       {children}
-    </Helmet>
+    </React.Fragment>
   );
 };
 
