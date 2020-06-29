@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   flex-direction: row-reverse;
   min-height: 100vh;
 	padding-bottom: 40px;
-	@media (max-width: 600px) {
+	@media (max-width: 812px) {
 		display: block;
 		background-image: url("${zhekanWithCard}");
 		background-size: contain;
@@ -22,7 +22,7 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (max-width: 600px) {
+  @media (max-width: 812px) {
     align-items: flex-end;
     margin-right: 20px;
   }

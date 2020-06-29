@@ -7,7 +7,7 @@ import sliderPhoto2 from "../images/slider-2-min.jpg";
 const SliderContainer = styled.div`
   flex-basis: 50%;
   position: relative;
-	@media (max-width: 600px) {
+	@media (max-width: 812px) {
 		display: none;
 	}
 `;

@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: right center;
-	@media (max-width: 600px) {
+	@media (max-width: 812px) {
 		flex-direction: column;
 	}
 `;
@@ -23,7 +23,7 @@ const Container = styled.div`
 	align-items: center;
   background-color: rgba(255, 255, 255, 0.2);
 	margin-left: 50px;
-	@media (max-width: 600px) {
+	@media (max-width: 812px) {
     width: 100%;
   }
 `;
@@ -32,7 +32,7 @@ const Card = styled.div`
 	min-width: 430px;
   min-height: 300px;
   padding-left: 20px;
-  @media (max-width: 600px) {
+  @media (max-width: 812px) {
     max-width: 380px;
   }
 `;

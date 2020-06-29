@@ -24,6 +24,8 @@ const Background = styled.div`
   background-size: cover;
   background-position: center top;
   background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: 812px) {
     background-attachment: scroll;
@@ -38,6 +40,7 @@ const HeaderContainer = styled.div`
   height: 100%;
   align-items: flex-end;
   justify-content: center;
+
   @media (max-width: 812px) {
     max-width: 100%;
     justify-content: flex-end;
@@ -50,22 +53,21 @@ const HeaderTitle = styled.h1`
   left: 10px;
   font-weight: bold;
   font-size: 54px;
-	line-height: 42px;
-  padding-top: 200px;
-  padding-left: 11px;
+  position: absolute;
+  top: 150px;
+  left: 11px;
   margin: 0;
 
   @media (max-width: 812px) {
-    padding-left: 15px;
-    padding-top: 15px;
-    top: 0;
+
+    top: 15px;
     font-size: 35px;
   }
 `;
 const HeaderDescription = styled.div`
   justify-content: center;
   height: 190px;
-  width: 180px;
+  width: 170px;
   padding-right: 10px;
   font-size: 18px;
   font-style: normal;
@@ -85,8 +87,12 @@ const HeaderIcons = styled.ul`
   width: 30px;
   padding-left: 15px;
   z-index: 3;
-	position: sticky;
-	top: 200px;
+  position: fixed;
+  top: 200px;
+
+  @media (max-width: 812px) {
+    top: 50px;
+  }
 
   a {
     margin-bottom: 15px;
@@ -151,6 +157,14 @@ const ContentWithoutNavbar = styled.div`
   width: calc(100% - 60px);
 `;
 
+const SidebarOverlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+`;
+
 const IndexPage = ({ data: { allInstaNode } }) => {
   return (
     <Seo
@@ -176,34 +190,35 @@ const IndexPage = ({ data: { allInstaNode } }) => {
     >
       <GlobalStyle />
       <Normalize />
+
+      <HeaderTitle>Evgeny Moskalov</HeaderTitle>
+      <HeaderIcons>
+        <a href="https://vm.tiktok.com/TVFURV/" target="_blank">
+          <TikTokIcon />
+        </a>
+        <a href="https://www.instagram.com/evgenymoskalov" target="_blank">
+          <InstagramIcon />
+        </a>
+        <a
+          href="https://www.youtube.com/channel/UC3Yt5PLr3KnNtbSivR6U_IA?view_as=subscriber"
+          target="_blank"
+        >
+          <YoutubeIcon />
+        </a>
+        <a href="https://www.facebook.com/evgeny.moskalov" target="_blank">
+          <FacebookIcon />
+        </a>
+        <a href="https://t.me/useyourfingers" target="_blank">
+          <TelegramIcon />
+        </a>
+        <a href="https://wa.me/0988986808" target="_blank">
+          <WhatsappIcon />
+        </a>
+        <a href="mailto:evgenymoskalov@gmail.com" target="_blank">
+          <MailIcon />
+        </a>
+      </HeaderIcons>
       <Background>
-        <HeaderTitle>Evgeny Moskalov</HeaderTitle>
-        <HeaderIcons>
-          <a href="https://vm.tiktok.com/TVFURV/" target="_blank">
-            <TikTokIcon />
-          </a>
-          <a href="https://www.instagram.com/evgenymoskalov" target="_blank">
-            <InstagramIcon />
-          </a>
-          <a
-            href="https://www.youtube.com/channel/UC3Yt5PLr3KnNtbSivR6U_IA?view_as=subscriber"
-            target="_blank"
-          >
-            <YoutubeIcon />
-          </a>
-          <a href="https://www.facebook.com/evgeny.moskalov" target="_blank">
-            <FacebookIcon />
-          </a>
-          <a href="https://t.me/useyourfingers" target="_blank">
-            <TelegramIcon />
-          </a>
-          <a href="https://wa.me/0988986808" target="_blank">
-            <WhatsappIcon />
-          </a>
-          <a href="mailto:evgenymoskalov@gmail.com" target="_blank">
-            <MailIcon />
-          </a>
-        </HeaderIcons>
         <HeaderContainer>
           <HeaderDescription>
             Sleight of hand magician / Playing cards geek
