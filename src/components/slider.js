@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { animated, useTransition } from "react-spring";
 import sliderPhoto1 from "../images/slider-1-min.jpg";
@@ -7,9 +7,9 @@ import sliderPhoto2 from "../images/slider-2-min.jpg";
 const SliderContainer = styled.div`
   flex-basis: 50%;
   position: relative;
-	@media (max-width: 812px) {
-		display: none;
-	}
+  @media (max-width: 812px) {
+    display: none;
+  }
 `;
 
 const Image = styled(animated.div)`
@@ -20,7 +20,7 @@ const Image = styled(animated.div)`
   height: 100%;
   background-image: url(${props => props.image});
   background-size: cover;
-	background-position: center;
+  background-position: center;
 `;
 
 const ControlContainer = styled.form`
@@ -67,6 +67,12 @@ const Slider = () => {
     leave: { opacity: 0 },
     config: { duration: 1000 },
   });
+
+  useEffect(() => {
+    setInterval(() => {
+      setIndex(index => (index === 0 ? 1 : 0));
+    }, 5000);
+  }, []);
 
   return (
     <SliderContainer>
