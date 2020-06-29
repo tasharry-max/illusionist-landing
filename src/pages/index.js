@@ -13,6 +13,7 @@ import About from "../components/about";
 import Airbnb from "../components/airbnb";
 import Instagram from "../components/instagram";
 import PartySlider from "../components/party-slider";
+import Footer from "../components/footer";
 import Seo from "../components/seo.js";
 import { graphql } from "gatsby";
 
@@ -98,6 +99,7 @@ const AirbnbTitle = styled.h3`
   color: black;
   -webkit-text-stroke: 0.5px white;
   padding-left: 50px;
+	text-align: center;
 `;
 
 const GlobalStyle = createGlobalStyle`
@@ -200,9 +202,10 @@ const IndexPage = ({ data: { allInstaNode } }) => {
         ></iframe>
       </VideoWrapper>
       <Instagram posts={allInstaNode} />
-      <AirbnbTitle>My AirBnb</AirbnbTitle>
+      <AirbnbTitle>My AirBnb experiences</AirbnbTitle>
       <Airbnb />
       <PartySlider />
+			<Footer/>
     </React.Fragment>
   );
 };

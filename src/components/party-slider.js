@@ -4,7 +4,7 @@ import { animated, useTransition } from "react-spring";
 import partySlider1 from "../images/party-slider-1-min.jpg";
 import partySlider2 from "../images/party-slider-2-min.jpg";
 import partySlider3 from "../images/party-slider-3-min.jpg";
-import partySlider4 from "../images/party-slider-4-min.jpg";
+import partySlider4 from "../images/party-slider-4.jpg";
 import partySlider5 from "../images/party-slider-5-min.jpg";
 
 const images = [

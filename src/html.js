@@ -25,10 +25,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <script
-          async=""
-          src="https://ru.airbnb.com/embeddable/airbnb_jssdk"
-        ></script>
+   
       </body>
     </html>
   );
