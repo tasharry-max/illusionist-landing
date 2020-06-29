@@ -16,6 +16,7 @@ import PartySlider from "../components/party-slider";
 import Footer from "../components/footer";
 import Seo from "../components/seo.js";
 import { graphql } from "gatsby";
+import SiteTitle from "../components/siteTitle";
 
 const Background = styled.div`
   min-height: 100vh;
@@ -48,22 +49,6 @@ const HeaderContainer = styled.div`
   }
 `;
 
-const HeaderTitle = styled.h1`
-  top: 100px;
-  left: 10px;
-  font-weight: bold;
-  font-size: 54px;
-  position: absolute;
-  top: 150px;
-  left: 11px;
-  margin: 0;
-
-  @media (max-width: 812px) {
-
-    top: 15px;
-    font-size: 35px;
-  }
-`;
 const HeaderDescription = styled.div`
   justify-content: center;
   height: 190px;
@@ -191,7 +176,7 @@ const IndexPage = ({ data: { allInstaNode } }) => {
       <GlobalStyle />
       <Normalize />
 
-      <HeaderTitle>Evgeny Moskalov</HeaderTitle>
+      <SiteTitle />
       <HeaderIcons>
         <a href="https://vm.tiktok.com/TVFURV/" target="_blank">
           <TikTokIcon />
