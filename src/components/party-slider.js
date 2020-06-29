@@ -8,11 +8,11 @@ import partySlider4 from "../images/party-slider-4.jpg";
 import partySlider5 from "../images/party-slider-5-min.jpg";
 
 const images = [
-  { href: partySlider1, title: "corporate party" },
-  { href: partySlider2, title: "wedding" },
-  { href: partySlider3, title: "magic for kids" },
-  { href: partySlider4, title: "master class" },
-  { href: partySlider5, title: "street magic" },
+  { href: partySlider1, title: "corporate party", backgroundPosition: "left 30% center"},
+  { href: partySlider2, title: "wedding", backgroundPosition: "center"},
+  { href: partySlider3, title: "magic for kids", backgroundPosition: "left 30% center"},
+  { href: partySlider4, title: "master class", backgroundPosition: "left 25% center"},
+  { href: partySlider5, title: "street magic", backgroundPosition: "left 40% center"},
 ];
 
 const Container = styled.div`
@@ -68,7 +68,7 @@ const Buttons = styled.div`
 		text-align: center;
 		height: 200px;
 		position: relative;
-		bottom: 200px;
+		bottom: 220px;
 		background: rgba(0, 0, 0, 0.3);
 	}
 `;
@@ -104,7 +104,7 @@ const PartySlider = () => {
           <Image
             image={transition.item.href}
             key={transition.key}
-            style={transition.props}
+						style={{...transition.props, backgroundPosition:transition.item.backgroundPosition}}
           />
         ))}
       </Images>

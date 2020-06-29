@@ -106,6 +106,11 @@ const AirbnbTitle = styled.h3`
   -webkit-text-stroke: 0.5px white;
   padding-left: 50px;
   text-align: center;
+  @media (max-width: 812px) {
+    text-align: left;
+    font-size: 44px;
+    padding: 0;
+  }
 `;
 
 const GlobalStyle = createGlobalStyle`

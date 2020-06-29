@@ -13,6 +13,10 @@ const Wrapper = styled.div`
 	background-position: right center;
 	@media (max-width: 812px) {
 		flex-direction: column;
+		background-position: left 45% center;
+    margin-left: -60px;
+    padding-left: 60px;
+    background-size: cover;
 	}
 `;
 
@@ -20,29 +24,35 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   width: 50%;
-	align-items: center;
+  align-items: center;
   background-color: rgba(255, 255, 255, 0.2);
 	margin-left: 50px;
 	@media (max-width: 812px) {
     width: 100%;
+    background: none;
+    margin: 0;
+    transform: scale(0.7);
+    transform-origin: top left;
   }
 `;
 
 const Card = styled.div`
-	min-width: 430px;
+  min-width: 430px;
   min-height: 300px;
   padding-left: 20px;
   @media (max-width: 812px) {
-    max-width: 380px;
+    max-width: 100%;
   }
 `;
 
 const Text = styled.div`
-	color: white;
-	font-size: 18px;
-	align-items: center;
-
-	padding: 30px;
+  color: white;
+  font-size: 18px;
+  align-items: center;
+  padding: 30px;
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 const AirBnb = () => (
   <Wrapper>
@@ -62,13 +72,13 @@ const AirBnb = () => (
           >
             Hanging out with local magician
           </a>
-          <script
-            async=""
-            src="https://ru.airbnb.com/embeddable/airbnb_jssdk"
-          ></script>
         </div>
       </Card>
-			<Text>Take one our sessionand learn basics in card magic. You can joing with zero level in sleight of hand. In the end you'll be able to perform a few tricks by your own style.</Text>
+      <Text>
+        Take one our sessionand learn basics in card magic. You can joing with
+        zero level in sleight of hand. In the end you'll be able to perform a
+        few tricks by your own style.
+      </Text>
     </Container>
     <Container>
       <Card>
@@ -86,13 +96,14 @@ const AirBnb = () => (
           >
             Раскройте секреты карт
           </a>
-          <script
-            async=""
-            src="https://ru.airbnb.com/embeddable/airbnb_jssdk"
-          ></script>
         </div>
       </Card>
-			<Text>Join me for a fun and unique magical experience like no other. A private session in the historical centrum of Kyiv. Seize the opportunity to see close up magic and learn best impromptu tricks during your trip to Ukraine.</Text>
+      <Text>
+        Join me for a fun and unique magical experience like no other. A private
+        session in the historical centrum of Kyiv. Seize the opportunity to see
+        close up magic and learn best impromptu tricks during your trip to
+        Ukraine.
+      </Text>
     </Container>
   </Wrapper>
 );
